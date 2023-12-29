@@ -3,10 +3,8 @@
 import { LinkIcon } from '@heroicons/react/20/solid'
 import React, { useState } from 'react'
 
-
 const ShareLinkButton = () => {
     const [clicked, setClicked] = useState(false);
-
     const handleClick = () => {
         navigator.clipboard.writeText(window.location.href);
         setClicked(true);

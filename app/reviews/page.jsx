@@ -2,12 +2,9 @@ import Link from "next/link";
 import Heading from "@/components/Heading";
 import { getReviews} from "@/lib/reviews";
 
-export async function generateStaticParams(){
-  const slugs = await getSlugs();
-  return slugs.map((slug) => ({ slug }));
-}
-
-
+export const metadata = {
+  title: 'Reviews',
+};
 
 export default async function ReviewPage() {
   const reviews = await getReviews();
